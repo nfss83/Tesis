@@ -160,17 +160,17 @@ public class TuioDemoComponent extends JComponent implements TuioListener {
                 g2.fillRect(0,0,width,height);
                 g.setColor(Color.black);
                // g.drawRect(10, 40, 50,40);
-logo1=	Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/a.png");
-logo2=	Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/e.png");
-logo3=	Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/i.png");
-logo4=	Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/o.png");
-logo5=	Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/u.png");
-logo6= Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/avion.png");
-logo7= Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/ele.png");
-logo8=Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/iguana.jpg");
-logo9=Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/oso.png");
-logo10=Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/uva.png");
-logo11=Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/vion.png");
+logo1=	Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/a.png");
+logo2=	Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/e.png");
+logo3=	Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/i.png");
+logo4=	Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/o.png");
+logo5=	Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/u.png");
+logo6= Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/avion.png");
+logo7= Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/ele.png");
+logo8=Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/iguana.jpg");
+logo9=Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/oso.png");
+logo10=Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/uva.png");
+logo11=Toolkit.getDefaultToolkit().getImage("C:/Nueva carpeta/vion.png");
 
 g.drawImage( logo1, 0,0, 150, 150, this );
 g.drawImage( logo2, 170,0, 150, 150, this );
@@ -181,7 +181,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
     if (banderaa==1){
     
     g2.drawImage( logo6, 0,200, 100, 200, this );
-    File fileAudio=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/a.mp3");
+    File fileAudio=new File("C:/Nueva carpeta/a.mp3");
     g2.drawImage(logo11,420, 380,this);
    if(coorX>170 && coorY>180  )
    {
@@ -205,7 +205,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
              
                if (banderaso==0)
                  {
-                   File fileAudio2=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/e.mp3");
+                   File fileAudio2=new File("C:/Nueva carpeta/e.mp3");
                    sonido.open(fileAudio2);
                    sonido.play();
                  }
@@ -220,7 +220,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
              
                if (banderaso==0)
                  {
-                   File fileAudio2=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/i.mp3");
+                   File fileAudio2=new File("C:/Nueva carpeta/i.mp3");
                    sonido.open(fileAudio2);
                    sonido.play();
                  }
@@ -235,7 +235,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
              
                if (banderaso==0 )
                  {
-                   File fileAudio2=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/o.mp3");
+                   File fileAudio2=new File("C:/Nueva carpeta/o.mp3");
                    sonido.open(fileAudio2);
                    sonido.play();
                  }
@@ -252,7 +252,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
              
                if (banderaso==0)
                  {
-                   File fileAudio2=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/u.mp3");
+                   File fileAudio2=new File("C:/Nueva carpeta/u.mp3");
                    sonido.open(fileAudio2);
                    sonido.play();
                  }
@@ -386,7 +386,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                                             {
                                                 g.drawImage(logo1,170, 190,this);
                                                 try {
-                                                    File fileAudio2=new File("C:/Users/ytepgt/Desktop/71.mp3");
+                                                    File fileAudio2=new File("C:/Nueva carpeta/71.mp3");
                                                     sonido.open(fileAudio2);
                                                     sonido.play();
                                                     
