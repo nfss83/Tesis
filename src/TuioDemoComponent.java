@@ -66,12 +66,13 @@ public class TuioDemoComponent extends JComponent implements TuioListener {
 	public static int width, height;
 	private float scale = 1.0f;
 	public boolean verbose = false;
-			int bandera=0;
-                        int bandera2=0;
-                        int bandera3=0;
+			int banderaa=0;
+                        int banderae=0;
+                        int banderai=0;
+                        int banderao=0;
+                        int banderau=0;
                         int banderaso=0;
-                        int banderaso2=0;
-                        int banderaso3=0;
+                      
 
 
 
@@ -173,7 +174,7 @@ g.drawImage( logo3, 330,0, 150, 150, this );
 g.drawImage( logo4, 480,0, 150, 150, this );
 g.drawImage( logo5, 630,0, 150, 150, this );
                
-    if (bandera==1 && bandera2==0 && bandera3==0){
+    if (banderaa==1){
     repaint(); 
     g2.drawImage( logo6, 0,200, 100, 200, this );
     File fileAudio=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/a.mp3");
@@ -189,7 +190,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
         }   
       }
                 
-    if (bandera==0 && bandera2==1 && bandera3==0){
+    if (banderae==1){
     g2.drawImage( logo7, 0,200, 100, 300, this );
         try {
              
@@ -204,7 +205,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                  }
         banderaso=1;     
         }
-   if (bandera3==1 && bandera==0 && bandera2==0){
+   if (banderai==1){
     g2.drawImage( logo8, 0,200, 100, 300, this );
         try {
              
@@ -219,7 +220,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                  }
         banderaso=1;
              }
-   if (bandera==1 && bandera2==1 && bandera3==0){
+   if (banderao==1){
     g2.drawImage( logo9, 0,200, 100, 300, this );
         try {
              
@@ -233,10 +234,10 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                 System.out.println(e);
                  }
         banderaso=1;
-        bandera=0;
+                    
         
              }
-   if (bandera==1 && bandera3==1 && bandera2==0){
+   if (banderau==1){
     g2.drawImage( logo10, 0,200, 100, 300, this );
         try {
              
@@ -250,7 +251,7 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                 System.out.println(e);
                  }
         banderaso=1;
-        bandera=0;
+        
         
              }
 
@@ -277,63 +278,75 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                                         if(current_point.getScreenX(w)<155 && current_point.getScreenY(h)<150)
                                         {
                                             
-                                            if(bandera!=1)
+                                            if(banderaa!=1)
                                             {
                                             banderaso=0;
                                             }
-                                            bandera = 1;
-                                            bandera2=0;
-                                            bandera3=0;
+                                            banderaa = 1;
+                                            banderae=0;
+                                            banderai=0;
+                                            banderao=0;
+                                            banderau=0;
+                                                    
+                                            
                                             
                                         }
                                         if(current_point.getScreenX(w)>165 && current_point.getScreenY(h)<150 && current_point.getScreenX(w)<320)
                                          {
                                             
-                                            if(bandera2!=1)
+                                            if(banderae!=1)
                                             {
                                                 banderaso=0;
                                             }
-                                            bandera = 0;
-                                            bandera2=1;
-                                            bandera3=0;
+                                            banderaa = 0;
+                                            banderae=1;
+                                            banderai=0;
+                                            banderao=0;
+                                            banderau=0;
                                             
                                          }   
                                          if(current_point.getScreenX(w)>330 && current_point.getScreenY(h)<480 && current_point.getScreenY(h)<150)
                                          {
                                             
-                                            if(bandera3!=1)
+                                            if(banderai!=1)
                                             {
                                             banderaso=0;
                                             }
-                                            bandera = 0;
-                                            bandera2= 0;
-                                            bandera3=1;
+                                            banderaa=0;
+                                            banderae=0;
+                                            banderai=1;
+                                            banderao=0;
+                                            banderau=0;
                                             
                                             
                                          }   
                                          
                                          if(current_point.getScreenX(w)>480 && current_point.getScreenY(h)<630 && current_point.getScreenY(h)<150)
                                          {
-                                            if(bandera!=1 && bandera2!=1)
+                                            if(banderao!=1)
                                             {
                                             banderaso=0;
                                             }
-                                            bandera = 1;
-                                            bandera2= 1;
-                                            bandera3=0;
+                                            banderaa=0;
+                                            banderae=0;
+                                            banderai=0;
+                                            banderao=1;
+                                            banderau=0;
                                             
                                          }  
                                          
                                          if(current_point.getScreenX(w)>630 && current_point.getScreenY(h)<780 && current_point.getScreenY(h)<150)
                                          {
                                             
-                                            if(bandera3!=1 && bandera!=1)
+                                            if(banderau!=1)
                                             {
                                             banderaso=0;
                                             }
-                                            bandera = 1;
-                                            bandera2= 0;
-                                            bandera3=1;
+                                            banderaa=0;
+                                            banderae=0;
+                                            banderai=0;
+                                            banderao=0;
+                                            banderau=1;
                                          }  
                                          
                                         
