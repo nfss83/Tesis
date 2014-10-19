@@ -56,9 +56,11 @@ public class TuioDemoComponent extends JComponent implements TuioListener {
       private Image logo8;
      private Image logo9;
      private Image logo10;
+     private Image logo11;
      BasicPlayer sonido = new BasicPlayer();
 
-    
+    int coorX=0;
+    int coorY=0;
 	public static final int finger_size = 15;
 	public static final int object_size = 60;
 	public static final int table_size = 760;
@@ -168,6 +170,8 @@ logo7= Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva
 logo8=Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/iguana.jpg");
 logo9=Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/oso.png");
 logo10=Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/uva.png");
+logo11=Toolkit.getDefaultToolkit().getImage("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/vion.png");
+
 g.drawImage( logo1, 0,0, 150, 150, this );
 g.drawImage( logo2, 170,0, 150, 150, this );
 g.drawImage( logo3, 330,0, 150, 150, this );
@@ -175,10 +179,15 @@ g.drawImage( logo4, 480,0, 150, 150, this );
 g.drawImage( logo5, 630,0, 150, 150, this );
                
     if (banderaa==1){
-    repaint(); 
+    
     g2.drawImage( logo6, 0,200, 100, 200, this );
     File fileAudio=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/a.mp3");
-        if (banderaso==0)
+    g2.drawImage(logo11,420, 380,this);
+   if(coorX>170 && coorY>180  )
+   {
+   g2.drawImage(logo1,170, 190,this);
+   } 
+   if (banderaso==0)
         {    
             try {
                  sonido.open(fileAudio);
@@ -275,6 +284,10 @@ g.drawImage( logo5, 630,0, 150, 150, this );
 					System.out.println(current_point.getScreenX(w)+"-"+current_point.getScreenY(h)+"-"+next_point.getScreenX(w));
                                         current_point = next_point;
                                         
+                                         
+                                            coorX=current_point.getScreenX(w);
+                                            coorY=current_point.getScreenY(h);
+                                        
                                         if(current_point.getScreenX(w)<155 && current_point.getScreenY(h)<150)
                                         {
                                             
@@ -352,8 +365,39 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                                         
                                         
                                 }
-			}
+                                
+                                
+			}//fin if pulsación
 			
+                        if (banderaa==1)
+                                        {
+                                            g2.setColor(Color.black);
+                                            g2.fillRect(0,0,width,height);
+                                            g.setColor(Color.black);
+                                            g.drawImage( logo1, 0,0, 150, 150, this );
+                                            g.drawImage( logo2, 170,0, 150, 150, this );
+                                            g.drawImage( logo3, 330,0, 150, 150, this );
+                                            g.drawImage( logo4, 480,0, 150, 150, this );
+                                            g.drawImage( logo5, 630,0, 150, 150, this );
+                                            g2.drawImage( logo1, coorX, coorY,coorX+80, coorY+80, this );
+                                            g2.drawImage( logo6, 0,200, 100, 200, this );
+                                             g2.drawImage(logo11,420, 380,this);
+                                            if(coorX>170 && coorY>180  )
+                                            {
+                                                g.drawImage(logo1,170, 190,this);
+                                                try {
+                                                    File fileAudio2=new File("C:/Users/ytepgt/Desktop/71.mp3");
+                                                    sonido.open(fileAudio2);
+                                                    sonido.play();
+                                                    
+                                                } catch (Exception e) {
+                                                    System.out.println(e);
+                                                 
+                                                }
+                                               
+                                            }
+
+                                        }  
 			// draw the finger tip
 			g2.setPaint(Color.lightGray);
 			int s = (int)(scale*finger_size);
