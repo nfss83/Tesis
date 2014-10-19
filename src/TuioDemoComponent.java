@@ -189,11 +189,11 @@ g.drawImage( logo5, 630,0, 150, 150, this );
         }   
       }
                 
-    if (bandera2==1 && bandera==0 && bandera3==0){
+    if (bandera==0 && bandera2==1 && bandera3==0){
     g2.drawImage( logo7, 0,200, 100, 300, this );
         try {
              
-               if (banderaso2==0)
+               if (banderaso==0)
                  {
                    File fileAudio2=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/e.mp3");
                    sonido.open(fileAudio2);
@@ -202,13 +202,13 @@ g.drawImage( logo5, 630,0, 150, 150, this );
              }catch (Exception e) {
                 System.out.println(e);
                  }
-        banderaso2=1;     
+        banderaso=1;     
         }
    if (bandera3==1 && bandera==0 && bandera2==0){
     g2.drawImage( logo8, 0,200, 100, 300, this );
         try {
              
-               if (banderaso3==0)
+               if (banderaso==0)
                  {
                    File fileAudio2=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/i.mp3");
                    sonido.open(fileAudio2);
@@ -217,13 +217,13 @@ g.drawImage( logo5, 630,0, 150, 150, this );
              }catch (Exception e) {
                 System.out.println(e);
                  }
-        banderaso3=1;
+        banderaso=1;
              }
    if (bandera==1 && bandera2==1 && bandera3==0){
     g2.drawImage( logo9, 0,200, 100, 300, this );
         try {
              
-               if (banderaso==0 && banderaso2==0)
+               if (banderaso==0 )
                  {
                    File fileAudio2=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/o.mp3");
                    sonido.open(fileAudio2);
@@ -233,13 +233,14 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                 System.out.println(e);
                  }
         banderaso=1;
-        banderaso2=1;
+        bandera=0;
+        
              }
    if (bandera==1 && bandera3==1 && bandera2==0){
     g2.drawImage( logo10, 0,200, 100, 300, this );
         try {
              
-               if (banderaso==0 && banderaso3==0)
+               if (banderaso==0)
                  {
                    File fileAudio2=new File("C:/Users/ytepgt/Desktop/tesis/Nueva carpeta/u.mp3");
                    sonido.open(fileAudio2);
@@ -249,7 +250,8 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                 System.out.println(e);
                  }
         banderaso=1;
-        banderaso3=1;
+        bandera=0;
+        
              }
 
 
@@ -274,46 +276,64 @@ g.drawImage( logo5, 630,0, 150, 150, this );
                                         
                                         if(current_point.getScreenX(w)<155 && current_point.getScreenY(h)<150)
                                         {
+                                            
+                                            if(bandera!=1)
+                                            {
+                                            banderaso=0;
+                                            }
                                             bandera = 1;
                                             bandera2=0;
                                             bandera3=0;
                                             
-                                            
-                                            banderaso2=0;
-                                            banderaso3=0;
                                         }
                                         if(current_point.getScreenX(w)>165 && current_point.getScreenY(h)<150 && current_point.getScreenX(w)<320)
                                          {
+                                            
+                                            if(bandera2!=1)
+                                            {
+                                                banderaso=0;
+                                            }
                                             bandera = 0;
                                             bandera2=1;
                                             bandera3=0;
-                                            banderaso=0;
-                                            banderaso3=0;
+                                            
                                          }   
                                          if(current_point.getScreenX(w)>330 && current_point.getScreenY(h)<480 && current_point.getScreenY(h)<150)
                                          {
+                                            
+                                            if(bandera3!=1)
+                                            {
+                                            banderaso=0;
+                                            }
                                             bandera = 0;
                                             bandera2= 0;
                                             bandera3=1;
-                                            banderaso=0;
-                                            banderaso2=0;
+                                            
+                                            
                                          }   
                                          
                                          if(current_point.getScreenX(w)>480 && current_point.getScreenY(h)<630 && current_point.getScreenY(h)<150)
                                          {
+                                            if(bandera!=1 && bandera2!=1)
+                                            {
+                                            banderaso=0;
+                                            }
                                             bandera = 1;
                                             bandera2= 1;
                                             bandera3=0;
-                                            banderaso3=0;
                                             
                                          }  
                                          
                                          if(current_point.getScreenX(w)>630 && current_point.getScreenY(h)<780 && current_point.getScreenY(h)<150)
                                          {
+                                            
+                                            if(bandera3!=1 && bandera!=1)
+                                            {
+                                            banderaso=0;
+                                            }
                                             bandera = 1;
                                             bandera2= 0;
                                             bandera3=1;
-                                            banderaso2=0;
                                          }  
                                          
                                         
